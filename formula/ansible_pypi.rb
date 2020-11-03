@@ -8,6 +8,12 @@ class AnsiblePypi < Formula
   license "GPL-3.0-or-later"
   head "https://github.com/ansible/ansible.git", branch: "devel"
 
+  bottle do
+    root_url "https://dl.bintray.com/jiridurdis/homebrew-utils"
+    cellar :any
+    sha256 "93ff40c775e8e19295ed0198f9431b0469c4bff16a037147bbff8ff12829da08" => :catalina
+  end
+
   depends_on "pkg-config" => :build
   depends_on "libyaml"
   depends_on "openssl@1.1"
