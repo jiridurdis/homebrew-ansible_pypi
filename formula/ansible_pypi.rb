@@ -3,16 +3,10 @@ class AnsiblePypi < Formula
 
   desc "Automate deployment, configuration, and upgrading"
   homepage "https://www.ansible.com/"
-  url "https://files.pythonhosted.org/packages/2e/d1/92422f8f53ae2d4e75ebdc2be2186a9ca2796b5d9679f20ed0239e86d8cf/ansible-base-2.10.3.tar.gz"
-  sha256 "35a208726b10fecbcf00c263ae4572b48f505b5796fb77a85c3e9c1036ea5e4f"
+  url "https://files.pythonhosted.org/packages/ba/22/7b58a8ba8e43159dc5cb32d97dd50e2b70b016585dbb188e9f2b61dac1e2/ansible-2.10.7.tar.gz"
+  sha256 "9ff024500116d53c460cb09ea92e3c9404119f100d1d1ff0de69a9dafca561d5"
   license "GPL-3.0-or-later"
   head "https://github.com/ansible/ansible.git", branch: "devel"
-
-  bottle do
-    root_url "https://dl.bintray.com/jiridurdis/homebrew-utils"
-    cellar :any
-    sha256 "055356c58ad1614caafa15e328a99180b1c7900ace47f7ffc07d7dc6d248f051" => :catalina
-  end
 
   depends_on "pkg-config" => :build
   depends_on "libyaml"
@@ -651,9 +645,9 @@ class AnsiblePypi < Formula
     sha256 "2d6c62001cb79a7de6fe286424967276edaca09d3833b72fb04f7863f29fce4b"
   end
 
-  resource "ansible" do
-    url "https://files.pythonhosted.org/packages/f2/8f/09054d2e2bf4eaa1754956e08b5fae1b0e51089e620e50438e501d83eda1/ansible-2.10.2.tar.gz"
-    sha256 "396ff188c7c1a2bb2e4be78d8a2f87e729c32c34946afbee04c09b68fbd8c2d0"
+  resource "ansible-base" do
+    url "https://files.pythonhosted.org/packages/83/f9/19c0f3c5bc555f08ee24122dfda7dc4968f966971817c2c3a07df6972c14/ansible-base-2.10.6.tar.gz"
+    sha256 "c6b3bc3dc83ee510357cb7afc8c557c05ce38f6b40e9bc9dab13551b2944dfd4"
   end
 
   def install
