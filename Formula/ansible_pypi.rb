@@ -10,6 +10,11 @@ class AnsiblePypi < Formula
   license "GPL-3.0-or-later"
   head "https://github.com/ansible/ansible.git", branch: "devel"
 
+  bottle do
+    root_url "https://github.com/jiridurdis/homebrew-utils/releases/download/ansible_pypi-2.10.7"
+    sha256 cellar: :any, catalina: "6132be2eb2a64cfe817e3e269ae8ac61a5e10a3d2260ce40cc4a41bff8aa4f74"
+  end
+
   depends_on "pkg-config" => :build
   depends_on "libyaml"
   depends_on "openssl@1.1"
