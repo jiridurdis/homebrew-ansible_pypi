@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class AnsiblePypi < Formula
   include Language::Python::Virtualenv
 
